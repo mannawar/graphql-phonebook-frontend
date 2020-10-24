@@ -9,7 +9,7 @@ const PhoneForm = ({ notify }) => {
   const [ changeNumber, result] = useMutation(EDIT_NUMBER)
 
   useEffect(() => {
-    if ( result.data && !result.data.editNumber) {
+    if ( result.data && result.data.editNumber) {
       notify('name not found')
     }
   }, [result.data]) // eslint-disable-line
